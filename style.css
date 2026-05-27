@@ -73,9 +73,17 @@ footer{background:#12322f;color:#dff6f1;padding:28px 0;margin-top:72px}
 .service-card h3{font-family:Fraunces,Georgia,serif;font-size:1.55rem;line-height:1.08;color:#12322f}
 .feature-list{display:grid;gap:12px;margin:22px 0 0;padding:0;list-style:none}
 .feature-list li{padding:14px 16px;border-left:4px solid #e95d2a;background:#fff;border-radius:10px;box-shadow:0 10px 28px rgba(22,49,47,.06)}
+.process-list{counter-reset:step;display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.process-list li{display:grid;grid-template-columns:auto 1fr;gap:10px 16px;align-items:start;padding:18px;border:1px solid rgba(22,49,47,.1);border-radius:16px;background:#fff;box-shadow:0 12px 32px rgba(22,49,47,.06)}
+.process-list li:before{counter-increment:step;content:counter(step,decimal-leading-zero);font-family:Fraunces,Georgia,serif;color:#e95d2a;font-weight:800;font-size:1.4rem;line-height:1}
+.process-list strong{color:#12322f;font-size:1.05rem}
+.process-list span{grid-column:2;color:#5a6d68}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
 .contact-box{background:#006d77;color:#fff;border-radius:22px;padding:28px}
 .contact-box a{color:#ffbe0b;font-weight:800}
+.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+.light-ghost{border-color:rgba(255,255,255,.32);color:#fff;background:rgba(255,255,255,.08)}
+.small-note{font-size:.92rem;color:#dff6f1}
 .form{display:grid;gap:14px}
 .form label{display:grid;gap:7px;font-weight:700;color:#27324e}
 .form input,.form textarea,.form select{width:100%;border:1px solid rgba(20,33,61,.16);border-radius:12px;padding:13px 14px;font:inherit;background:#fff}
