@@ -76,6 +76,42 @@ footer{background:#12322f;color:#dff6f1;padding:28px 0;margin-top:72px}
 .emergency-card{border-color:rgba(233,93,42,.28);background:linear-gradient(180deg,#fff,#fff3eb)}
 .emergency-card .text-link{display:inline-flex;margin-top:18px}
 .emergency-notice{background:#fffdf7;border-color:rgba(233,93,42,.22);box-shadow:0 18px 45px rgba(233,93,42,.08)}
+.emergency-landing{position:relative;overflow:hidden;background:#12322f;color:#fff;padding:42px 0 54px}
+.emergency-landing:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,rgba(18,50,47,.98),rgba(18,50,47,.72) 54%,rgba(18,50,47,.44)),url('assets/toiture-avant-peinture-974.jpg');background-size:cover;background-position:center;filter:saturate(.78)}
+.emergency-landing .container{position:relative}
+.storm-alert{display:inline-flex;align-items:center;gap:12px;min-height:42px;padding:7px 14px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.1);backdrop-filter:blur(12px);font-weight:900}
+.storm-alert span{display:inline-flex;align-items:center;min-height:26px;padding:0 10px;border-radius:999px;background:#e95d2a;color:#fff;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.storm-alert strong{font-size:.92rem;color:#fff8ec}
+.emergency-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:44px;align-items:end;margin-top:58px}
+.emergency-copy{max-width:820px}
+.emergency-copy h1{font-family:Fraunces,Georgia,serif;font-size:clamp(3.1rem,7vw,6.8rem);line-height:.92;margin:12px 0 22px;color:#fff}
+.emergency-copy p{max-width:700px;margin:0 0 28px;color:rgba(255,255,255,.84);font-size:1.18rem}
+.emergency-landing .btn-ghost{color:#fff;border-color:rgba(255,255,255,.32);background:rgba(255,255,255,.12)}
+.storm-side{align-self:stretch;display:grid;grid-template-rows:1fr auto;min-height:470px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);backdrop-filter:blur(12px);border-radius:8px;overflow:hidden;box-shadow:0 26px 70px rgba(0,0,0,.24)}
+.storm-photo{min-height:250px;background:linear-gradient(0deg,rgba(5,31,34,.22),rgba(5,31,34,0)),url('assets/toiture-apres-peinture-974.jpg');background-size:cover;background-position:center}
+.storm-side-body{padding:22px;background:rgba(255,248,236,.94);color:#12322f}
+.storm-side-body span{display:block;color:#e95d2a;font-weight:900;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.storm-side-body strong{display:block;font-family:Fraunces,Georgia,serif;font-size:1.5rem;line-height:1.06}
+.storm-ribbon{background:#e95d2a;color:#fff}
+.storm-ribbon-inner{display:flex;gap:0;justify-content:space-between;overflow:auto;white-space:nowrap}
+.storm-ribbon span{display:inline-flex;align-items:center;min-height:54px;padding:0 20px;font-weight:900;border-left:1px solid rgba(255,255,255,.22)}
+.storm-ribbon span:first-child{border-left:0}
+.emergency-field{background:#fff8ec}
+.emergency-field-grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:36px;align-items:start}
+.field-main{padding-right:24px}
+.field-lines{margin-top:30px;border-top:1px solid rgba(22,49,47,.16)}
+.field-lines article{display:grid;grid-template-columns:58px minmax(130px,.32fr) 1fr;gap:18px;align-items:start;padding:22px 0;border-bottom:1px solid rgba(22,49,47,.16)}
+.field-lines span{font-family:Fraunces,Georgia,serif;color:#e95d2a;font-size:1.8rem;font-weight:800;line-height:1}
+.field-lines strong{font-family:Fraunces,Georgia,serif;font-size:1.45rem;line-height:1;color:#12322f}
+.field-lines p{margin:0;color:#5a6d68;font-weight:700}
+.now-box{position:sticky;top:102px;padding:26px;border-radius:8px;background:#fff;border:1px solid rgba(22,49,47,.12);box-shadow:0 24px 60px rgba(22,49,47,.12)}
+.now-label{display:inline-flex;margin-bottom:14px;padding:6px 10px;border-radius:999px;background:rgba(233,93,42,.12);color:#e95d2a;font-weight:900;text-transform:uppercase;letter-spacing:.04em;font-size:.74rem}
+.now-box .btn{width:100%;margin-top:4px}
+.storm-diagnostic{background:#fff}
+.diagnostic-board{display:grid;grid-template-columns:.88fr 1.12fr;gap:34px;align-items:center;padding:34px;border-radius:8px;background:linear-gradient(135deg,#12322f,#006d77);color:#fff;box-shadow:0 22px 60px rgba(0,109,119,.18)}
+.diagnostic-board .section-kicker{color:#ffbe0b}
+.diagnostic-board h2{font-family:Fraunces,Georgia,serif;font-size:clamp(2rem,4vw,3.4rem);line-height:1;margin:8px 0 0;color:#fff}
+.diagnostic-board p{margin:0;color:#dff6f1;font-size:1.08rem;font-weight:700}
 .feature-list{display:grid;gap:12px;margin:22px 0 0;padding:0;list-style:none}
 .feature-list li{padding:14px 16px;border-left:4px solid #e95d2a;background:#fff;border-radius:10px;box-shadow:0 10px 28px rgba(22,49,47,.06)}
 .process-list{counter-reset:step;display:grid;gap:14px;margin:0;padding:0;list-style:none}
@@ -190,6 +226,7 @@ footer{background:#12322f;color:#dff6f1;padding:28px 0;margin-top:72px}
 .city-links a{padding:16px 18px;border-radius:14px;background:#fff;border:1px solid rgba(22,49,47,.1);font-weight:900;color:#12322f;box-shadow:0 12px 28px rgba(22,49,47,.06)}
 .city-links a:hover{color:#006d77;border-color:rgba(0,109,119,.32)}
 @media (max-width:860px){.nav-inner{align-items:flex-start;padding:14px 0}.nav-links{display:flex;flex-wrap:wrap;gap:8px 14px;justify-content:flex-start;font-size:.94rem}.nav-cta{min-height:36px;padding:0 14px}.hero{min-height:auto;padding:44px 0}.hero-inner,.split{grid-template-columns:1fr}.hero-visual{min-height:400px}.hero-card{inset:0}.hero-stats,.cards,.gallery,.quick-check-grid{grid-template-columns:1fr}.footer-bottom{display:grid}.zones{columns:1}.page-title{font-size:clamp(2.25rem,12vw,3.9rem)}}
+@media (max-width:860px){.emergency-landing{padding:28px 0 40px}.storm-alert{border-radius:8px;align-items:flex-start;display:grid}.emergency-hero-grid,.emergency-field-grid,.diagnostic-board{grid-template-columns:1fr}.emergency-hero-grid{margin-top:36px;gap:28px}.emergency-copy h1{font-size:clamp(2.8rem,13vw,4.9rem)}.storm-side{min-height:auto}.field-main{padding-right:0}.field-lines article{grid-template-columns:52px 1fr;gap:8px 14px}.field-lines p{grid-column:2}.now-box{position:relative;top:auto}.storm-ribbon-inner{justify-content:flex-start}.diagnostic-board{padding:26px}}
 @media (max-width:860px){.home-photo-hero{min-height:690px;padding:44px 0 28px;background-position:center top}.home-photo-shade{background:linear-gradient(0deg,rgba(5,31,34,.92),rgba(5,31,34,.18) 72%)}.home-photo-inner{grid-template-columns:1fr}.home-copy{padding-top:168px}.home-copy h1{line-height:.95}.home-proof-row,.city-links{grid-template-columns:1fr}.home-proof-row{transform:translateY(-22px)}.work-photo-panel{min-height:430px}.color-studio-inner{grid-template-columns:1fr}.roof-preview-wrap{min-height:460px}.paint-swatches{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:860px){.photo-stack{position:relative;inset:auto;height:430px}.photo-note{left:14px;right:14px;width:auto}.island-visual{min-height:auto}.zone-panel{grid-template-columns:1fr}.proof-grid{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;display:grid}}
 @media (max-width:560px){.container{width:min(100% - 22px,1120px)}.nav-inner{display:grid;gap:12px}.nav-links a:not(.nav-cta){padding:4px 0}.hero-title{font-size:2.85rem}.home-photo-hero{min-height:650px}.home-copy h1{font-size:2.62rem}.home-copy p{font-size:1rem;line-height:1.45}.hero-ctas .btn,.cta-row .btn{width:100%}.hero-badge{width:104px;height:104px;font-size:.88rem}.hero-card-title{font-size:1.55rem}.proof-grid{grid-template-columns:1fr}.zone-panel{padding:26px}.photo-stack{height:380px}.photo-note strong{font-size:1.3rem}.work-stack{gap:38px}.paint-swatches{grid-template-columns:1fr}.paint-swatch{min-height:48px}.roof-preview-wrap{min-height:380px}.roof-label{left:14px;right:14px;bottom:18px}.before-after{gap:8px}.ba-card{border-radius:14px}.ba-image{aspect-ratio:1/1.15}.ba-content{padding:12px}.ba-content span{min-height:24px;padding:0 9px;font-size:.7rem}.ba-content h2{font-size:1.05rem;margin:10px 0 8px}.ba-content p{font-size:.84rem;line-height:1.45}}
