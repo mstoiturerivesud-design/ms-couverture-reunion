@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ms-couverture-reunion.vercel.app/sitemap.xml
+Sitemap: https://couvreur974.fr/sitemap.xml
