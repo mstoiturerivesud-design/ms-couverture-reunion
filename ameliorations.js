@@ -11,6 +11,8 @@
 (function () {
   'use strict';
 
+  function initAmeliorations() {
+
   // ======= CONFIG — à personnaliser =======
   var WA_NUMBER = '262XXXXXXXXX';   // ← Votre numéro WhatsApp sans le + (ex: 262693123456)
   var WA_MSG    = encodeURIComponent('Bonjour, je souhaite un devis pour ma toiture à La Réunion.');
@@ -241,4 +243,11 @@
     }, { passive: true });
   }
 
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAmeliorations, { once: true });
+  } else {
+    initAmeliorations();
+  }
 })();
