@@ -14,7 +14,7 @@
   // ======= CONFIG — à personnaliser =======
   var WA_NUMBER = '262XXXXXXXXX';   // ← Votre numéro WhatsApp sans le + (ex: 262693123456)
   var WA_MSG    = encodeURIComponent('Bonjour, je souhaite un devis pour ma toiture à La Réunion.');
-  var SITE_URL  = 'https://couvreur974.fr';
+  var SITE_URL  = 'https://ms-couverture-reunion.vercel.app';
   var OG_IMAGE  = SITE_URL + '/og-image.jpg'; // ← URL de votre photo pour les réseaux sociaux
   // =========================================
 
