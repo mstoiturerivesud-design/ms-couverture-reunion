@@ -30,6 +30,16 @@
     }, { once: true });
   }
 
+  function appendToHead(el) {
+    if (document.head) {
+      document.head.appendChild(el);
+      return;
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      if (document.head) document.head.appendChild(el);
+    }, { once: true });
+  }
+
 
   // ─────────────────────────────────────────
   // 0. SEO META TAGS (title, description, géo, OG, canonical)
@@ -37,7 +47,7 @@
   function setMeta(name, content, prop) {
     var attr = prop ? 'property' : 'name';
     var el = document.querySelector('meta[' + attr + '="' + name + '"]');
-    if (!el) { el = document.createElement('meta'); document.head.appendChild(el); }
+    if (!el) { el = document.createElement('meta'); appendToHead(el); }
     el.setAttribute(attr, name);
     el.setAttribute('content', content);
   }
@@ -77,7 +87,7 @@
   if (!canonical) {
     canonical = document.createElement('link');
     canonical.rel = 'canonical';
-    document.head.appendChild(canonical);
+    appendToHead(canonical);
   }
   canonical.href = SITE_URL + '/';
 
@@ -103,7 +113,7 @@
   var bizEl = document.createElement('script');
   bizEl.type = 'application/ld+json';
   bizEl.textContent = JSON.stringify(bizSchema);
-  document.head.appendChild(bizEl);
+  appendToHead(bizEl);
 
 
   // ─────────────────────────────────────────
@@ -118,7 +128,7 @@
     '.wa-float:hover .wa-float-label{opacity:1;transform:translateX(0);}',
     '@media(max-width:600px){.wa-float-label{display:none;}}'
   ].join('');
-  document.head.appendChild(waCSS);
+  appendToHead(waCSS);
 
   var waEl = document.createElement('a');
   waEl.className = 'wa-float';
@@ -151,7 +161,7 @@
     '.avis-name{font-family:Outfit,system-ui,sans-serif;font-weight:700;color:#1a1a1a;font-size:15px;}',
     '.avis-ville{font-family:Outfit,system-ui,sans-serif;font-size:13px;color:#999;margin-top:3px;}'
   ].join('');
-  document.head.appendChild(avisCSS);
+  appendToHead(avisCSS);
 
   var avis = [
     { nom: 'Marie-Hélène P.', ville: 'Saint-Gilles-les-Bains', texte: 'Toiture refaite impeccablement. Équipe sérieuse, ponctuelle, résultat vraiment au top !' },
@@ -214,7 +224,7 @@
   var faqEl = document.createElement('script');
   faqEl.type = 'application/ld+json';
   faqEl.textContent = JSON.stringify(faq);
-  document.head.appendChild(faqEl);
+  appendToHead(faqEl);
 
 
   // ─────────────────────────────────────────
@@ -224,7 +234,7 @@
     var og = document.createElement('meta');
     og.setAttribute('property', 'og:image');
     og.setAttribute('content', OG_IMAGE);
-    document.head.appendChild(og);
+    appendToHead(og);
   }
 
 
@@ -237,7 +247,7 @@
     navCSS.textContent =
       'nav{transition:background .3s,box-shadow .3s;}' +
       'nav.nav--scrolled{background:rgba(255,248,236,.95)!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 2px 16px rgba(0,0,0,.08);}';
-    document.head.appendChild(navCSS);
+    appendToHead(navCSS);
     window.addEventListener('scroll', function () {
       nav.classList.toggle('nav--scrolled', window.scrollY > 60);
     }, { passive: true });
