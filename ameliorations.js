@@ -41,11 +41,9 @@
   // Robots
   setMeta('robots', 'index, follow');
 
-  // Géolocalisation (aide Google à cibler La Réunion)
+  // Géolocalisation générale, sans coordonnées tant qu'elles ne sont pas vérifiées.
   setMeta('geo.region',    'FR-RE');
-  setMeta('geo.placename', 'La Réunion');
-  setMeta('geo.position',  '-21.115141;55.536384');
-  setMeta('ICBM',          '-21.115141, 55.536384');
+  setMeta('geo.placename', 'Saint-Gilles-les-Bains, La Réunion');
 
   // Open Graph (partage réseaux sociaux)
   setMeta('og:type',        'website',                                              true);
@@ -80,12 +78,12 @@
     'image': OG_IMAGE,
     'address': {
       '@type': 'PostalAddress',
-      'addressLocality': 'Saint-Paul',
+      'streetAddress': '48 Rue des Sables',
+      'addressLocality': 'Saint-Gilles-les-Bains',
       'addressRegion': 'La Réunion',
-      'postalCode': '97460',
+      'postalCode': '97434',
       'addressCountry': 'FR'
     },
-    'geo': { '@type': 'GeoCoordinates', 'latitude': -21.115141, 'longitude': 55.536384 },
     'areaServed': { '@type': 'State', 'name': 'La Réunion' },
     'priceRange': '€€',
     'description': 'Artisan couvreur à La Réunion spécialisé en toiture tôle, peinture, étanchéité et rénovation.'
