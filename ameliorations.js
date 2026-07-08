@@ -43,6 +43,20 @@
       faqEl.textContent = JSON.stringify(faq);
       document.head.appendChild(faqEl);
     }
+
+    // 7. FIL D'ARIANE (BreadcrumbList) pour Google
+    var pf = location.pathname.split('/').pop();
+    if (pf && pf !== 'index.html' && pf !== 'merci.html' && pf !== '404.html') {
+      var crumbs = [{n:'Accueil', u: SITE_URL + '/'}];
+      if (/^couvreur-/.test(pf)) crumbs.push({n:'Zones', u: SITE_URL + '/zones.html'});
+      else if (!/^(contact|zones|services|realisations)\.html$/.test(pf)) crumbs.push({n:'Services', u: SITE_URL + '/services.html'});
+      var h1el = document.querySelector('h1');
+      crumbs.push({n: h1el ? h1el.textContent.trim() : document.title, u: SITE_URL + '/' + pf});
+      var bcEl = document.createElement('script');
+      bcEl.type = 'application/ld+json';
+      bcEl.textContent = JSON.stringify({'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':crumbs.map(function(c,i){return {'@type':'ListItem','position':i+1,'name':c.n,'item':c.u};})});
+      document.head.appendChild(bcEl);
+    }
     var nav = document.querySelector('nav');
     if (nav) {
       var navCSS = document.createElement('style');
