@@ -464,3 +464,65 @@ img{max-width:100%;height:auto}
 .seo-table th,.seo-table td{padding:14px;text-align:left;border:1px solid rgba(22,49,47,.18);vertical-align:top}
 .seo-table thead{background:#dff6f1}
 .work-block[id]{scroll-margin-top:120px}
+
+/* Demande de devis et présentation des chantiers. */
+.home-photo-hero{min-height:720px;padding:56px 0 70px;align-items:center}
+.home-photo-inner{grid-template-columns:minmax(0,1.2fr) minmax(340px,.8fr);gap:48px;align-items:center}
+.home-copy{padding:0;max-width:650px}
+.home-copy h1{font-size:clamp(2.9rem,4.6vw,4.65rem);line-height:1.06;margin:20px 0 24px;text-wrap:initial}
+.home-copy h1 em{color:#ffcf45;font-weight:500}
+.home-copy p{font-size:1.125rem;line-height:1.65;max-width:540px}
+.home-copy .hero-ctas{display:flex;gap:12px}
+.home-copy,.hero-proof-card{animation:none}
+.home-photo-hero:before{animation:none;opacity:.3}
+.home-quote{background:#fffaf2;color:#16312f;border:1px solid #fff6df;border-radius:14px;padding:28px;box-shadow:0 24px 65px #0004;scroll-margin-top:100px}
+.quote-kicker{display:block;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#006d77}
+.home-quote h2{font-family:Fraunces,Georgia,serif;line-height:1.08;font-size:2rem;margin:10px 0 12px;color:#16312f}
+.home-quote>p{font-size:.96rem;line-height:1.5;color:#526660;margin:0 0 20px}
+.home-quote-form{display:grid;gap:14px}
+.home-quote-form label{font-size:.9rem;line-height:1.4;font-weight:600;color:#16312f;display:grid;gap:6px;min-width:0}
+.quote-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.home-quote-form input,.home-quote-form select{min-width:0;width:100%;min-height:45px;background:#fff;border:1px solid #c6d4ce;border-radius:6px;padding:10px;font:inherit;font-size:1rem;color:#16312f}
+.home-quote-form .btn{margin-top:2px;min-height:50px;width:100%;justify-content:space-between;font-size:.96rem}
+.home-quote-form .quote-privacy{font-size:.8rem;line-height:1.45;margin:0;color:#526660}
+.quote-call{display:block;margin-top:18px;padding-top:16px;border-top:1px solid #d6e1da;font-size:.85rem;color:#526660}
+.quote-call strong{display:block;color:#006d77;font-size:1.2rem}
+.home-proof-row{transform:translateY(-28px)}
+.home-projects{padding-top:30px;background:#fff8ec}
+.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.project-card{background:#fff;border:1px solid #16312f1a;border-radius:10px;overflow:hidden}
+.project-image{display:block;position:relative;aspect-ratio:4/3;overflow:hidden;background:#d9e6df}
+.project-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 65%}
+.project-image span{position:absolute;left:16px;bottom:16px;background:#fffaf2;color:#16312f;font-weight:600;font-size:.82rem;padding:6px 10px;border-radius:4px}
+.project-copy{padding:22px}
+.project-city{color:#006d77;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.project-copy h3{font-family:Fraunces,Georgia,serif;font-size:1.6rem;line-height:1.15;margin:10px 0}
+.project-copy p{color:#526660;font-size:.96rem;line-height:1.6;margin:0 0 18px}
+.project-copy .text-link{font-size:.94rem;text-decoration:underline;text-underline-offset:4px}
+.need-section{background:#f0f6f3}
+.need-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.need-grid>a{display:flex;flex-direction:column;background:#fff;border:1px solid #16312f1a;border-radius:8px;padding:22px;transition:border-color .2s ease}
+.need-grid>a:hover{border-color:#006d77}
+.need-number{color:#006d77;font-weight:600;font-size:.85rem}
+.need-grid h3{font-family:Fraunces,Georgia,serif;font-size:1.45rem;line-height:1.18;margin:14px 0 10px}
+.need-grid p{color:#526660;font-size:.95rem;line-height:1.55;margin:0 0 22px}
+.need-grid strong{margin-top:auto;font-size:.85rem;color:#006d77}
+.need-urgent{font-size:.95rem;margin:24px 0 0}
+.need-urgent a{text-decoration:underline;text-underline-offset:3px}
+.commitment-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:24px 0}
+.commitment-grid span{color:#006d77;font-weight:600}
+.commitment-grid h3{font-size:1.2rem;line-height:1.3;margin:10px 0}
+.commitment-grid p{font-size:1rem;line-height:1.6;margin:0;color:#526660}
+#demande-devis{scroll-margin-top:100px}
+@media(max-width:1100px){.home-photo-inner{gap:26px;grid-template-columns:minmax(0,1fr) minmax(330px,.85fr)}.need-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:860px){.home-photo-hero{min-height:auto;padding:44px 0 48px}.home-photo-inner{grid-template-columns:1fr;gap:30px}.home-copy{padding:0;max-width:680px}.home-copy h1{font-size:3.6rem}.home-copy p{font-size:1.05rem}.home-quote{max-width:680px;width:100%}.home-proof-row{transform:none}.project-grid{grid-template-columns:1fr;gap:20px}.project-image{aspect-ratio:16/10}.commitment-grid{grid-template-columns:1fr;gap:20px}}
+@media(max-width:560px){.home-photo-hero{padding:32px 0 36px}.home-copy h1{font-size:2.55rem;line-height:1.08}.home-copy p{margin-bottom:22px}.home-copy .hero-ctas{display:flex}.home-copy .hero-ctas .btn{width:auto;padding:12px 14px;font-size:.9rem}.home-quote{padding:22px 18px}.home-quote h2{font-size:1.8rem}.quote-fields{grid-template-columns:1fr}.need-grid{grid-template-columns:1fr}.section-head{align-items:flex-start;gap:20px}.project-copy{padding:20px}.home-projects{padding-top:36px}}
+
+.quote-checklist{list-style:none;padding:0;margin:24px 0;display:grid;gap:18px}
+.quote-checklist li{display:flex;gap:14px;align-items:flex-start}
+.quote-checklist li>span{font-size:.82rem;color:#006d77;border:1px solid #bcd4cb;padding:5px 8px;border-radius:4px}
+.quote-checklist strong,.quote-checklist small{display:block}
+.quote-checklist strong{font-size:.98rem}
+.quote-checklist small{font-size:.88rem;color:#526660;line-height:1.45;margin-top:4px}
+.quote-start{width:100%;justify-content:space-between;font-size:.96rem}
+.home-quote .quote-help{font-size:.82rem;line-height:1.5;margin:14px 0 0}

@@ -20,3 +20,16 @@
     });
   }
 })();
+
+// Préremplissage des champs visibles, sans envoyer la demande.
+(() => {
+  const form = document.getElementById('demande-devis');
+  if (!form) return;
+  const params = new URLSearchParams(window.location.search);
+  const commune = params.get('commune');
+  const communeInput = form.elements.namedItem('commune');
+  if (commune && commune.length <= 150 && communeInput) communeInput.value = commune;
+  const besoin = params.get('besoin');
+  const select = form.elements.namedItem('besoin');
+  if (select && [...select.options].some(option => option.value === besoin)) select.value = besoin;
+})();
