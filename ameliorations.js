@@ -33,3 +33,6 @@
   const select = form.elements.namedItem('besoin');
   if (select && [...select.options].some(option => option.value === besoin)) select.value = besoin;
 })();
+
+// Libellé compact de contact, sans modifier le numéro ni le lien.
+document.querySelectorAll('.mobile-action-bar a[href^="tel:"]').forEach(link => { if (!link.hasAttribute('aria-label')) link.setAttribute('aria-label', link.textContent.trim()); link.textContent = 'Appeler'; });
