@@ -526,3 +526,43 @@ img{max-width:100%;height:auto}
 .quote-checklist small{font-size:.88rem;color:#526660;line-height:1.45;margin-top:4px}
 .quote-start{width:100%;justify-content:space-between;font-size:.96rem}
 .home-quote .quote-help{font-size:.82rem;line-height:1.5;margin:14px 0 0}
+
+/* 2026-11 : lisibilité responsive, sans suppression de contenu. */
+.page-hero{background:linear-gradient(90deg,#102b28ed,#102b28b8),url('/assets/accueil-toiture-974-768.webp') center 45%/cover no-repeat;padding:clamp(38px,6vw,76px) 0}
+.page-hero .page-title,.page-hero .section-kicker,.page-hero .page-lead{color:#fff}
+.page-hero .page-title{max-width:900px;font-size:clamp(2rem,4.5vw,3.8rem);line-height:1.14;text-wrap:pretty}
+.page-hero .page-lead{max-width:760px}
+.hero-eyebrow{background:#ffffff15;border-color:#ffffff50;color:#fff}
+.home-copy h1 em{color:#fff}
+.split>.cards{grid-template-columns:1fr;gap:12px}
+.split>.cards .card{padding:18px 22px}
+.project-image.project-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px}
+.project-pair>div{position:relative;min-width:0;min-height:0;overflow:hidden}
+.project-pair img{object-position:center}
+.project-pair span{left:8px;bottom:8px;padding:4px 7px;font-size:.75rem}
+#controle-toiture-assurance{background:#f0f6f3!important;border:0!important;padding:40px 0!important}
+#controle-toiture-assurance .container>div:first-child{background:#12322f!important;color:white!important}
+#controle-toiture-assurance .section-title{font-size:clamp(1.65rem,3vw,2.5rem)!important;color:var(--ink)!important}
+#controle-toiture-assurance .container>div:not(:first-child){border-color:#d6e1da!important}
+@media(max-width:560px){
+ .section{padding:30px 0}
+ .home-copy h1{font-size:clamp(1.95rem,8vw,2.55rem)}
+ .hero-eyebrow{font-size:.67rem;padding:5px 8px;min-height:0}
+ .home-copy .hero-ctas{flex-wrap:wrap}
+ .home-proof-row{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .home-proof-row article{padding:10px 7px;min-width:0}
+ .home-proof-row strong{font-size:1rem;line-height:1.15}
+ .home-proof-row span{font-size:.72rem;line-height:1.3}
+ .mobile-action-bar a{white-space:nowrap;font-size:clamp(.72rem,3.4vw,.96rem);min-width:0}
+ .page-hero .page-title{font-size:clamp(1.9rem,7.6vw,2.5rem)}
+ .project-copy{padding:14px}
+ .project-copy h3{font-size:1.35rem}
+ .project-copy p{margin-bottom:10px}
+ .quote-checklist{gap:10px;margin:14px 0}
+ .process-grid{gap:8px;margin-top:18px}
+ .process-grid article{padding:14px}
+ .need-grid>a{padding:16px}
+ .need-grid p{margin-bottom:10px}
+ .service-link-grid a{min-height:0;padding:14px 42px 14px 16px}
+ .local-cluster-links a{min-height:0;padding:14px 42px 14px 16px}
+}
