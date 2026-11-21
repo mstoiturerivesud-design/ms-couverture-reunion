@@ -36,3 +36,14 @@
 
 // Libellé compact de contact, sans modifier le numéro ni le lien.
 document.querySelectorAll('.mobile-action-bar a[href^="tel:"]').forEach(link => { if (!link.hasAttribute('aria-label')) link.setAttribute('aria-label', link.textContent.trim()); link.textContent = 'Appeler'; });
+
+// Masquer uniquement les compteurs décoratifs, sans toucher aux données chiffrées.
+(() => {
+ const clean = () => {
+  document.querySelectorAll('main span, main small, main b, main strong, main h2, main h3, main h4, main p, main .need-number').forEach(el => {
+   if (el.children.length === 0 && /^0[1-9](?:[.·])?$/.test(el.textContent.trim()) && !el.closest('a, button, label, time, [data-roof-label]')) { el.style.display = 'none'; el.setAttribute('aria-hidden','true'); }
+   else if (el.matches('h2,h3,h4') && el.firstChild?.nodeType === 3) el.firstChild.textContent = el.firstChild.textContent.replace(/^\s*0[1-9][.·]\s+/, '');
+  });
+ };
+ if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded',clean,{once:true}); else clean();
+})();
